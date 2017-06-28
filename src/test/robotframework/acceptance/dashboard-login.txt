@@ -4,7 +4,7 @@ Documentation               Using Vaadin TestBench Hub with Robot with Selenium2
 Library  Selenium2Library
 Library  OperatingSystem
 
-# Local setup. Make sure to use -D-Dwebdriver.chrome.driver=/path/to/chromedriver if not in system path
+# Local setup. Make sure to use -Dwebdriver.chrome.driver=/path/to/chromedriver if not in system path
 Test Setup                  Start local browser
 
 # Setup for TestBench Grid
