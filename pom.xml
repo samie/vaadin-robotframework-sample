@@ -18,7 +18,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Install newer versions of couple of Robot Framework Dependencies -->
+        <!-- Install newer versions of couple of Robot Framework dependencies -->
         <dependency>
             <groupId>org.python</groupId>
             <artifactId>jython-standalone</artifactId>
