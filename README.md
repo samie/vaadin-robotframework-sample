@@ -1,7 +1,7 @@
 # Vaadin and Robot Framework Sample
-Simple example using [Robot Framework](http://robotframework.org/) with [Vaadin](https://vaadin.com/framework) and Vaadin [TestBench](https://vaadin.com/testbench) Hub. 
+Simple example using [Robot Framework](http://robotframework.org/) with [Vaadin](https://vaadin.com/framework) and Vaadin [TestBench](https://vaadin.com/testbench) Hub. The example uses [SeleniumLibrary](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html) and [robotframework-maven-plugin](https://github.com/robotframework/MavenPlugin) to run browser based tests. 
 
-This test logs in to https://demo.vaadin.com/dashboard and checks that login was succesful.
+This sample test logs in to https://demo.vaadin.com/dashboard and checks that login was succesful.
 
 ## Settings
 
