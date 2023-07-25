@@ -8,38 +8,17 @@
     <artifactId>robotframework</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
     <dependencies>
-        <!-- Use Selenium library for Robot Framework -->
-        <dependency>
-            <groupId>com.github.markusbernhardt</groupId>
-            <artifactId>robotframework-selenium2library-java</artifactId>
-            <version>1.4.0.8</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- Install newer versions of couple of Robot Framework dependencies -->
-        <dependency>
-            <groupId>org.python</groupId>
-            <artifactId>jython-standalone</artifactId>
-            <version>2.7.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>4.1.12.Final</version>
-            <scope>test</scope>
-        </dependency>
+        <!-- No project dependencies needed. All dependencies as build plugin dependencies.  -->
     </dependencies>
 
-
     <build>
+        <defaultGoal>verify</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.robotframework</groupId>
                 <artifactId>robotframework-maven-plugin</artifactId>
-                <version>1.4.7</version>
+                <version>2.1.0</version>
                 <executions>
                     <execution>
                         <goals>
@@ -47,6 +26,40 @@
                         </goals>
                     </execution>
                 </executions>
+
+                <dependencies>
+                    <!-- Specify Robot Framework version -->
+                    <dependency>
+                        <groupId>org.robotframework</groupId>
+                        <artifactId>robotframework</artifactId>
+                        <version>4.1.2</version>
+                    </dependency>
+                    <!-- Load SeleniumLibrary for Robot Framework -->
+                    <dependency>
+                        <groupId>com.github.marketsquare</groupId>
+                        <artifactId>robotframework-seleniumlibrary</artifactId>
+                        <version>4.0.0.0</version>
+                    </dependency>
+
+                    <!-- Specify Selenium web drivers -->
+                    <dependency>
+                        <groupId>org.seleniumhq.selenium</groupId>
+                        <artifactId>selenium-chrome-driver</artifactId>
+                        <version>4.10.0</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.seleniumhq.selenium</groupId>
+                        <artifactId>selenium-firefox-driver</artifactId>
+                        <version>4.10.0</version>
+                    </dependency>
+
+                    <!-- This is needed to fix runtime exceptions running Chrome driver -->
+                    <dependency>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava</artifactId>
+                        <version>31.0.1-jre</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
