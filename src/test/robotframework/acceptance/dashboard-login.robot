@@ -1,19 +1,19 @@
 *** Settings ***
 Documentation               Using Vaadin TestBench Hub with Robot Framework
 
-Library  Selenium2Library
+Library  SeleniumLibrary
+Suite Setup  WebDriver Manager Setup   Chrome
 
-# Local browser setup. Make sure to use -Dwebdriver.chrome.driver=/path/to/chromedriver if not in system path
+# Local browser setup (default)
 Test Setup                  Start local browser
 
-# Setup for Vaadin TestBench Grid
+# Setup for Vaadin TestBench Grid (uncomment to apply)
 # Test Setup                  Start browser in TestBench Hub
 
 Test Teardown               Close All Browsers
 
 *** Variables ***
-
-${BROWSER}                   chrome
+${BROWSER}                   Chrome
 ${ALIAS}                     None
 ${URL}                       https://demo.vaadin.com/dashboard/
 ${HUB_URL}                   http://localhost:4444/wd/hub
