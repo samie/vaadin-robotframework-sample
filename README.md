@@ -5,7 +5,7 @@ This test logs in to https://demo.vaadin.com/dashboard and checks that login was
 
 ## Settings
 
-All settings are specified in the beginning of the [test file](src/test/robotframework/acceptance/dashboard-login.txt)
+All settings are specified in the beginning of the [test file](src/test/robotframework/acceptance/dashboard-login.robot)
 There are two modes for the test:
 
  1. Local browser (enabled by default)
