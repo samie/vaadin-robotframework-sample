@@ -11,16 +11,11 @@ There are two modes for the test:
  1. Local browser (enabled by default)
  2. TestBench Hub
  
-Chrome driver is used in both, but for local mode you need to have the chromedriver binary in the system path or specify it with `-Dwebdriver.chrome.driver=/path/to/chromedriver`.
-If TestBench Hub is used, make sure that the correct URL is given in `${HUB_URL}` in Settings. By default local hub is used.
+Chrome driver is used in both. If TestBench Hub is used, make sure that the correct URL is given in `${HUB_URL}` in Settings. By default local hub is used and 
 
 ## Running
 
-To execute the test locally run:
-
-    mvn verify -Dwebdriver.chrome.driver=/path/to/chromedriver
-
-To execute the test in TestBench Hub run:
+To execute the test locally or using TestBench Hub run:
 
     mvn verify
 
